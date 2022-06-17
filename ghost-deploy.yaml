@@ -39,7 +39,7 @@ spec:
           value: "587"
         - name: mail__options__auth__user
           value: "nicholasaa@gmail.com"
-        - name: mail__options__auth__user
+        - name: mail__options__auth__pass
           value: "cCwmbIOWnNS3JPQH"
         image: ghost
         imagePullPolicy: Always
