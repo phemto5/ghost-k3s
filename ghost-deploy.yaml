@@ -32,7 +32,7 @@ spec:
         - name: mail__transport
           value: "SMTP"
         - name: mail__from
-          value: "ghost@blog.gamenight.dynu.net"
+          value: "nicholasaa@gmail.com"
         - name: mail__options__host
           value: "smtp-relay.sendinblue.com"
         - name: mail__options__port
