@@ -31,14 +31,12 @@ spec:
           value: https://ghost.gamenight.dynu.net/
         - name: mail__transport
           value: SMTP
-        - name: mail__options__service
-          value: SendInBlue
+        - name: mail__from
+          value: ghost@gamenight.dynu.net
         - name: mail__options__host
           value: smtp-relay.sendinblue.com
         - name: mail__options__port
           value: "587"
-        - name: mail__options__secure
-          value: "true"
         - name: mail__options__auth__user
           value: nicholasaa@gmail.com
         - name: mail__options__auth__user
