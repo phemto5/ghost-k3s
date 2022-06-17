@@ -30,17 +30,17 @@ spec:
         - name: url
           value: https://ghost.gamenight.dynu.net/
         - name: mail__transport
-          value: SMTP
+          value: "SMTP"
         - name: mail__from
-          value: ghost@gamenight.dynu.net
+          value: "ghost@gamenight.dynu.net"
         - name: mail__options__host
-          value: smtp-relay.sendinblue.com
+          value: "smtp-relay.sendinblue.com"
         - name: mail__options__port
           value: "587"
         - name: mail__options__auth__user
-          value: nicholasaa@gmail.com
+          value: "nicholasaa@gmail.com"
         - name: mail__options__auth__user
-          value: cCwmbIOWnNS3JPQH
+          value: "cCwmbIOWnNS3JPQH"
         image: ghost
         imagePullPolicy: Always
         name: ghost-deploy
