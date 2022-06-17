@@ -46,7 +46,7 @@ spec:
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
         volumeMounts:
-        - mountPath: /var/lib/ghost/
+        - mountPath: /var/lib/ghost/content
           name: vol0
       dnsPolicy: ClusterFirst
       restartPolicy: Always
