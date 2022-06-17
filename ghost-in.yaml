@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+  name: ghost-in
+  namespace: default
+spec:
+  rules:
+  - host: ghost.gamenight.dynu.net
+    http:
+      paths:
+      - backend:
+          service:
+            name: ghost-deploy-nodeport
+            port:
+              number: 2368
+        path: /
+        pathType: Prefix
+  tls:
+  - hosts:
+    - ghost.gamenight.dynu.net
+    secretName: ghost-gamenight-dynu-net
+status: {}
