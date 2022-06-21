@@ -5,6 +5,7 @@ metadata:
     deployment.kubernetes.io/revision: "3"
   labels:
     app: ghost
+    app.kubernetes.io/managed-by: Helm
   name: ghost-deploy
   namespace: default
 spec:
@@ -13,6 +14,7 @@ spec:
   revisionHistoryLimit: 10
   selector:
     matchLabels:
+      app: ghost
       workload.user.cattle.io/workloadselector: apps.deployment-default-ghost-deploy
   strategy:
     rollingUpdate:
@@ -28,19 +30,19 @@ spec:
       containers:
       - env:
         - name: url
-          value: https://ghost.gamenight.dynu.net/
+          value: 'https://ghost.gamenight.dynu.net/'
         - name: mail__transport
-          value: "SMTP"
+          value: SMTP
         - name: mail__from
-          value: "nicholasaa@gmail.com"
+          value: nicholasaa@gmail.com
         - name: mail__options__host
-          value: "smtp-relay.sendinblue.com"
+          value: smtp-relay.sendinblue.com
         - name: mail__options__port
-          value: "587"
+          value: '587'
         - name: mail__options__auth__user
-          value: "nicholasaa@gmail.com"
+          value: nicholasaa@gmail.com
         - name: mail__options__auth__pass
-          value: "cCwmbIOWnNS3JPQH"
+          value: cCwmbIOWnNS3JPQH
         image: ghost
         imagePullPolicy: Always
         name: ghost-deploy
