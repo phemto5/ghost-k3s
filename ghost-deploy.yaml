@@ -15,7 +15,6 @@ spec:
   selector:
     matchLabels:
       app: ghost
-      workload.user.cattle.io/workloadselector: apps.deployment-default-ghost-deploy
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -25,7 +24,6 @@ spec:
     metadata:
       labels:
         app: ghost
-        workload.user.cattle.io/workloadselector: apps.deployment-default-ghost-deploy
     spec:
       affinity: {}
       containers:
