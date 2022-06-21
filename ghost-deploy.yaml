@@ -23,7 +23,7 @@ spec:
   template:
     metadata:
       labels:
-        app: ghost
+        workload.user.cattle.io/workloadselector: apps.deployment-default-ghost-deploy
     spec:
       affinity: {}
       containers:
