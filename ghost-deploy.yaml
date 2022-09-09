@@ -46,9 +46,9 @@ spec:
         - name: database__connection__host
           value: mysql-service
         - name: database__connection__user
-          value: user_ghost
+          value: root
         - name: database__connection__password
-          value: helpiamlostandcannotgetoutofthewoods
+          value: example
         - name: database__connection__database
           value: ghost
 
