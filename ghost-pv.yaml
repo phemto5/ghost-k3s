@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: ghost-pv
+  name: ghost-pv-anderson
 spec:
   accessModes:
   - ReadWriteMany
@@ -9,7 +9,7 @@ spec:
   capacity:
     storage: 10Gi
   nfs:
-    path: /mnt/data/ghost
+    path: /mnt/data/ghost/anderson
     server: nfs.anderson.local
   persistentVolumeReclaimPolicy: Retain
   volumeMode: Filesystem
