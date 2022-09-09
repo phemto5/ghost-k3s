@@ -52,7 +52,7 @@ spec:
         # - name: database__connection__database
         #   value: bitnami_ghost
 
-        image: bitnami/ghost
+        image: ghost:alpine
         imagePullPolicy: Always
         name: ghost-deploy
         ports:
