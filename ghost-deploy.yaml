@@ -40,7 +40,7 @@ spec:
           value: nicholasaa@gmail.com
         - name: mail__options__auth__pass
           value: cCwmbIOWnNS3JPQH
-        image: ghost:4
+        image: ghost
         imagePullPolicy: Always
         name: ghost-deploy
         ports:
