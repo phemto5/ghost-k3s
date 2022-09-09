@@ -48,7 +48,7 @@ spec:
         - name: database__connection__user
           value: user_ghost
         - name: database__connection__password
-          value: "helpiamlostandcannotgetoutofthewoods"
+          value: helpiamlostandcannotgetoutofthewoods
         - name: database__connection__database
           value: ghost
 
