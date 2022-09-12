@@ -2,8 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: ghost
-  name: ghost-deploy
+    app: jacksonghost
+    app.kubernetes.io/managed-by: Helm
+  name: jacksonghost-deploy
   namespace: default
 spec:
   progressDeadlineSeconds: 600
@@ -11,7 +12,7 @@ spec:
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      workload.user.cattle.io/workloadselector: apps.deployment-default-ghost-deploy
+      workload.user.cattle.io/workloadselector: apps.deployment-default-jacksonghost-deploy
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -20,12 +21,13 @@ spec:
   template:
     metadata:
       labels:
-        workload.user.cattle.io/workloadselector: apps.deployment-default-ghost-deploy
+        workload.user.cattle.io/workloadselector: apps.deployment-default-jacksonghost-deploy
     spec:
+      affinity: {}
       containers:
       - env:
         - name: url
-          value: 'https://ghost.gamenight.dynu.net/'
+          value: 'https://jacksonghost.gamenight.dynu.net/'
         - name: mail__transport
           value: SMTP
         - name: mail__from
@@ -50,7 +52,7 @@ spec:
           value: ghost
         image: ghost:alpine
         imagePullPolicy: Always
-        name: ghost-deploy
+        name: jacksonghost-deploy
         ports:
         - containerPort: 2368
           name: web
@@ -75,4 +77,5 @@ spec:
       volumes:
       - name: vol0
         persistentVolumeClaim:
-          claimName: ghost-pvc-anderson
+          claimName: jacksonghost-pvc-anderson
+status: {}

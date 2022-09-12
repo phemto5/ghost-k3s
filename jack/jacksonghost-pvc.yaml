@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: jacksonghost-pvc-anderson
+  namespace: default
+spec:
+  accessModes:
+  - ReadWriteOnce
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: ""
+  volumeMode: Filesystem
+  volumeName: jacksonghost-pv-anderson
+status: {}
