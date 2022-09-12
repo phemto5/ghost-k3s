@@ -39,7 +39,7 @@ spec:
         - name: mail__options__auth__user
           value: nicholasaa@gmail.com
         - name: mail__options__auth__pass
-          value: cCwmbIOWnNS3JPQH
+          value: GEpMFycO0VDABRjS
 
         - name: database__client
           value: mysql
