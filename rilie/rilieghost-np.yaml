@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rilieghost-deploy-nodeport
+  namespace: default
+spec:
+  externalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: web
+    nodePort: 32001
+    port: 2368
+    protocol: TCP
+    targetPort: 2368
+  selector:
+    workload.user.cattle.io/workloadselector: apps.deployment-default-rilieghost-deploy
+  sessionAffinity: None
+  type: NodePort
+status: {}
