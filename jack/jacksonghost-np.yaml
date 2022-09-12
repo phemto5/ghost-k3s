@@ -10,7 +10,7 @@ spec:
   ipFamilyPolicy: SingleStack
   ports:
   - name: web
-    nodePort: 32001
+    nodePort: 32002
     port: 2368
     protocol: TCP
     targetPort: 2368
