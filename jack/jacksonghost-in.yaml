@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+  name: ghost-in
+  namespace: default
+spec:
+  rules:
+  - host: jacksonghost.gamenight.dynu.net
+    http:
+      paths:
+      - backend:
+          service:
+            name: jacksonghost-deploy-nodeport
+            port:
+              number: 2368
+        path: /
+        pathType: Prefix
+  tls:
+  - hosts:
+    - jacksonghost.gamenight.dynu.net
+    secretName: jacksonghost-gamenight-dynu-net
+status: {}
