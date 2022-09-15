@@ -29,19 +29,19 @@ spec:
         - name: url
           value: 'https://jacksonghost.gamenight.dynu.net/'
         - name: mail__transport
-          value: 'SMTP'
-        - name: mail__from
-          value: 'GHOST <nicholasaa@gmail.com>'
+          value: SMTP
+        # - name: mail__from
+        #   value: 'GHOST <nicholasaa@gmail.com>'
         - name: mail__options__host
           value: 'smtp-relay.sendinblue.com'
-        - name: mail__options__service
-          value: 'SMTP'
+        # - name: mail__options__service
+        #   value: 'SendInBlue'
         - name: mail__options__port
           value: '587'
         - name: mail__options__auth__user
-          value: 'nicholasaa@gmail.com'
+          value: nicholasaa@gmail.com
         - name: mail__options__auth__pass
-          value: 'GEpMFycO0VDABRjS'
+          value: GEpMFycO0VDABRjS
         - name: database__client
           value: mysql
         - name: database__connection__host
