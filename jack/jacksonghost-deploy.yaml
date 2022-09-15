@@ -30,8 +30,8 @@ spec:
           value: 'https://jacksonghost.gamenight.dynu.net/'
         - name: mail__transport
           value: SMTP
-        # - name: mail__from
-        #   value: 'GHOST <nicholasaa@gmail.com>'
+        - name: mail__from
+          value: nicholasaa@gmail.com
         - name: mail__options__host
           value: 'smtp-relay.sendinblue.com'
         # - name: mail__options__service
