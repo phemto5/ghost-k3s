@@ -37,7 +37,7 @@ spec:
         - name: mail__options__auth__user
           value: nicholasaa@gmail.com
         - name: mail__options__auth__pass
-          value: "xsmtpsib-bf8f775efc5ea5bc57ddec821cd010cf1b5dde3fd402e5408c592048b967e8c6-3CaBEVwHKXqSPTtm"
+          value: "GEpMFycO0VDABRjS"
         - name: database__client
           value: mysql
         - name: database__connection__host
@@ -48,7 +48,7 @@ spec:
           value: example
         - name: database__connection__database
           value: ghost
-        image: ghost:alpine
+        image: ghost
         imagePullPolicy: Always
         name: ghost-deploy
         ports:
